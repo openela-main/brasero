@@ -1,0 +1,31 @@
+From 9c25c3c501a85220701d2b377f609e15ac11b829 Mon Sep 17 00:00:00 2001
+From: David King <amigadave@amigadave.com>
+Date: Tue, 19 Oct 2021 10:04:07 +0100
+Subject: [PATCH] checksum: Default to SHA256 rather than MD5
+
+---
+ data/org.gnome.brasero.gschema.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/data/org.gnome.brasero.gschema.xml b/data/org.gnome.brasero.gschema.xml
+index 4bad20b0..2359bc7f 100644
+--- a/data/org.gnome.brasero.gschema.xml
++++ b/data/org.gnome.brasero.gschema.xml
+@@ -12,12 +12,12 @@
+   </schema>
+   <schema id="org.gnome.brasero.config" path="/org/gnome/brasero/config/">
+     <key name="checksum-image" type="i">
+-      <default>0</default>
++      <default>2</default>
+       <summary>The type of checksum used for images</summary>
+       <description>Set to 0 for MD5, 1 for SHA1 and 2 for SHA256</description>
+     </key>
+     <key name="checksum-files" type="i">
+-      <default>0</default>
++      <default>2</default>
+       <summary>The type of checksum used for files</summary>
+       <description>Set to 0 for MD5, 1 for SHA1 and 2 for SHA256</description>
+     </key>
+-- 
+GitLab
+
